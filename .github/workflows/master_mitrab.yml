@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'MitraB'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C6486220E56E4D559CC8874B93E88630 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_31876EF65C714865B42D5DA464E1AA06 }}
           package: .
