@@ -15,3 +15,13 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure Pass - Sponsorship(c29fc6e2-6923-4bf1-a9ba-92d6c16b14b5)'
+    appType: 'webApp'
+    appName: 'MitraB'
+    deployToSlotOrASE: true
+    resourceGroupName: 'MitraB-rg'
+    slotName: 'production'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
